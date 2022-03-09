@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from PlantAnalysis import analyze_file
 
-DATA_FOLDER = "C:/Files/2022/InsectScaleRobotics/plant-live-viewing-data/data"
+DATA_FOLDER = "/Users/arthurliu/Documents/InsectRobotics/plant-live-viewing-data/data"
 CSV_FILE = "plant_data.csv"
 
 

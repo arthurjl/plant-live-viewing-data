@@ -72,8 +72,8 @@ def analyze_file(filepath):
   img[:,:,2]=im2*b
 
   img = (img * 255).astype(np.uint8)
-  # plt.imshow(img)
-  # plt.show()
+  plt.imshow(img)
+  plt.show()
 
   count_matrix = np.empty([len(img), len(img[0])])
   count_matrix.shape
@@ -132,8 +132,8 @@ def analyze_file(filepath):
         print(f"Group {len(groups) + 1} of size: {group_size} at location {center}")
         groups.append((group_size, center))
 
-  # plt.imshow(count_matrix)
-  # plt.show()
+  plt.imshow(count_matrix)
+  plt.show()
 
   def distance(elem1, elem2):
     return (elem1[0] - elem2[0])**2 + (elem1[1] - elem2[1])**2
@@ -153,3 +153,7 @@ def analyze_file(filepath):
 
   # If multiple ones have same location, then it means they merged, do not use
   return plant_size_measurements
+
+
+if __name__=="__main__":
+  analyze_file("/Users/arthurliu/Documents/InsectRobotics/plant-live-viewing-data/data/2022-03-01_20-00-00_output.jpg")
